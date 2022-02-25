@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour
     {
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
+
+        float xSpeed = xInput * speed;
+        float zSpeed = zInput * speed;
+
+        Vector3 newVelocity = new Vector3(xSpeed, 0, zSpeed);
+        playerRb.velocity = newVelocity;
     }
 
     void DirectInput()
@@ -41,7 +47,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         my.SetActive(false);
     }
