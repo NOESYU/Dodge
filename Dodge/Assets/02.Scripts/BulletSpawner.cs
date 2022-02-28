@@ -24,6 +24,15 @@ public class BulletSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(bulletPrefab);
+        timeAfterSpawn += Time.deltaTime;
+        
+        if(timeAfterSpawn >= spawnRate)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+            bullet.transform.LookAt(target); // 바라보고자하는 위치 지정 LookAt
+
+            spawnRate = Random.Range(spawnRateMin, spawnRateMax);
+            timeAfterSpawn = 0;
+        }       
     }
 }
