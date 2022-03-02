@@ -7,25 +7,31 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public float surviveTime;
-    public bool isGameover;
+    public bool isGameOver;
+
     public Text timeText;
-    public Text gameoverText;
+    public Text gameOverText;
     public Text recordText;
 
     // Start is called before the first frame update
     void Start()
     {
         surviveTime = 0f;
-        isGameover = false;
+        isGameOver = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isGameover)
+        if (!isGameOver)
         {
             surviveTime += Time.deltaTime;
             timeText.text = "Time : " + (int)surviveTime;
         }        
+    }
+
+    public void EndGame()
+    {
+        isGameOver = true;
     }
 }
