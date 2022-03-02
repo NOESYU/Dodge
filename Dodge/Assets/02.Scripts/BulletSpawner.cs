@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,7 +29,7 @@ public class BulletSpawner : MonoBehaviour
         if(timeAfterSpawn >= spawnRate)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-            bullet.transform.LookAt(target); // ¹Ù¶óº¸°íÀÚÇÏ´Â À§Ä¡ ÁöÁ¤ LookAt
+            bullet.transform.LookAt(target); // ë°”ë¼ë³´ê³ ìí•˜ëŠ” ìœ„ì¹˜ ì§€ì • LookAt
 
             spawnRate = Random.Range(spawnRateMin, spawnRateMax);
             timeAfterSpawn = 0;

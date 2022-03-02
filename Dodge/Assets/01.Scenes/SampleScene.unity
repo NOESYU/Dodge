@@ -1537,8 +1537,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   surviveTime: 0
   isGameOver: 0
+  gameOverText: {fileID: 1274396815}
   timeText: {fileID: 691001345}
-  gameOverText: {fileID: 1274396818}
   recordText: {fileID: 725983271}
 --- !u!4 &1751586364
 Transform:
